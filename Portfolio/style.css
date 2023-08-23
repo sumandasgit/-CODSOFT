@@ -1,0 +1,363 @@
+
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color:aliceblue;
+  /* color: #333; */
+
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:rgb(64, 64, 129);
+  color: white;
+  padding: 2rem;
+  margin-right: 0%;
+
+}
+.logo img {
+  max-width: 25px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #66ccff;
+}
+
+
+  
+  /* home */
+  #home {
+    display: flex;
+    justify-content: space-between;
+    padding: 8rem;
+    padding-top: 4rem;
+    
+  }
+  
+  .home-content {
+    flex: 1;
+  }
+  
+  .home-image {
+    margin-top: 10px;
+    text-align: right;
+  }
+  
+  .home-image img {
+    width: 250px;
+    border-radius:10px;
+    box-shadow: 0px 0px 30px rgb(64, 64, 129);
+  }
+  .home-image :hover{
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+@media screen and (max-width:300px) {
+  .home-image img{
+    max-width: 100px;
+  }
+}
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.1);
+    
+  }
+  
+  .social-icons img {
+    max-width: 35px;
+    border-radius: 50%;
+  }
+  
+
+.resume-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgb(64, 64, 129);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .resume-link:hover {
+    background-color: #66ccff;
+  }
+  
+  
+  /* Style skills section */
+  #skills {
+    text-align: center;
+    padding: 3rem;
+    background-color:aliceblue;
+  }
+  .skill{
+    border-radius: 50%;
+    background-color:#ccc;
+    padding: 25px;
+  }
+  .skills {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 1rem;
+
+
+  }
+  .skill img {
+    width: 70px;
+    transition: transform 0.3s;
+  }
+  
+  .skill img:hover {
+    transform: scale(1.1);
+  }
+  #project {
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .project {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project img {
+    max-width: 100%;
+    transition: transform 0.3s;
+  }
+  
+  .project:hover img {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .project:hover .overlay {
+    opacity: 1;
+  }
+
+  
+#certificates {
+  text-align: center;
+
+  padding:2rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.certificate {
+  margin: 2rem;
+  /* float: right; */
+  background-color:rgb(212, 227, 227);
+  border-radius: 3px;
+  padding: 3px;
+  padding-bottom: 1rem;
+  box-shadow:0 8px 15px rgb(64, 64, 129);
+  transition: box-shadow 0.3s ease;
+  width: 300px;
+}
+.certificate:hover{
+    box-shadow: 0 10px 20px black ;
+}
+.certificate button{
+  display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgb(64, 64, 129);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+.certificate :hover button{
+  background-color:#66ccff;
+  /* font-size: 25px; */
+}
+.certificate :hover img {
+  transform: scale(1.1);
+}
+
+.certificate img {
+  max-width: 100%;
+  transition: transform 0.3s;
+}
+/* Style contact form */
+.contact-form {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form button {
+    background-color: #6018de;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #66ccff;
+  }
+  
+  /* Style footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #6018de;
+    color: white;
+  }
+
+#aboutme{
+  background-color: aliceblue;
+  padding-bottom: 40px;
+  /* display: inline; */
+}
+.aboutme{
+  margin-top: 20px;
+  margin-left: 20rem;
+  margin-right: 20px;
+  /* margin-bottom: 40px; */
+  padding: 2.8rem;
+  /* border: solid black ; */
+  box-shadow: 0 0 15px rgba(33,33,33,.2);
+  border-radius: 10px;
+  background-color: white;
+}
+#immg img{
+  max-width: 350px;
+  border-radius: 50%;
+  background-color: black;
+}
+.education .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 3rem;
+  
+}
+
+.education .box-container .box{
+  width:20rem;
+  margin:3rem 1rem;
+  padding-left: 3rem;
+  border-left: 4px solid rgb(64, 64, 129) ;
+  position: relative;
+}
+
+.education .box-container .box span{
+  font-size: 1rem;
+  background:rgb(64, 64, 129);
+  color:white;
+  border-radius: 5rem;
+  padding:.5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+  font-size: 1.7rem;
+  color:black;
+  padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+  font-size: 1rem;
+  color:dimgray;
+  padding: 1rem 0;
+}
+
+.education .box-container .box img{
+  position: absolute;
+  top:-1.5rem; left:-2.5rem;
+  width: 5rem;
+  /* line-height: 6rem; */
+  text-align: center;
+  background-color: aliceblue;
+}
+h1{
+  font-size: 35px;
+  
+  text-shadow: 0 7px 5px dimgrey;
+  
+}
+
+
